@@ -1,9 +1,5 @@
 import Image from 'next/image';
 
-// Force next.js to treat this route as server-side rendered
-// Without this line, during the build process, next.js will treat this route as static and build a static HTML file for it
-export const dynamic = "force-dynamic";
-
 export default function Home() {
   const showDeployButton = process.env.SHOW_DEPLOY_BUTTON === 'true';
   console.log('showDeployButton', showDeployButton, process.env.SHOW_DEPLOY_BUTTON);
@@ -13,7 +9,7 @@ export default function Home() {
 
         <div className='flex flex-col items-center gap-6 text-center sm:items-start sm:text-left'>
           <h1 className='max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50'>
-            On the home page
+            On the dynamically rendered page
           </h1>
           <p className='max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400'>
             Looking for a starting point or more instructions? Head over to{' '}
