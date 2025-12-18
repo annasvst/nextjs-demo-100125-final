@@ -1,8 +1,5 @@
 import Image from 'next/image';
 
-// Force next.js to treat this route as server-side rendered
-// Without this line, during the build process, next.js will treat this route as static and build a static HTML file for it
-export const dynamic = "force-dynamic";
 
 export default function Home() {
   const showDeployButton = process.env.SHOW_DEPLOY_BUTTON === 'true';
